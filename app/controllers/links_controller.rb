@@ -11,6 +11,8 @@ class LinksController < ApplicationController
   end
 
   def new
+    link = Link.new
+    link.standardize_target_url!
     render 'new.html.erb'
   end
 end
