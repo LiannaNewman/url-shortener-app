@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/visits/links/:id' => 'links#show'
   get '/visits/links/:id/edit' => 'links#edit'
   patch '/visits/links/:id' => 'links#update'
-  delete 'visits/links/:id' => 'links#destroy'
+  delete '/visits/links/:id' => 'links#destroy'
 
   get '/visits' => 'vists#create'
 end

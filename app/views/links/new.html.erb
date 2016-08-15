@@ -12,7 +12,12 @@
   </div>
 <% end %>
 
-<%= form_tag("/links", method: "post") do %>
-  <%= render 'form' %>
-  <%= submit_tag("Create New Link") %>
+<%= form_tag "/links" do %>
+  <%= label_tag :slug %>
+  <%= text_field_tag :slug, @link.slug %>
+
+  <%= label_tag :target_url %>
+  <%= text_field_tag :target_url, @link.target_url %>
+
+  <%= submit_tag "Create Link" %>
 <% end %>
